@@ -6,50 +6,88 @@
     <link rel="stylesheet" href="css/styles.css" media="screen">
     <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <title>Pizza Ordering</title>
+    <title>Pizza Order</title>
   </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Pizza</h1>
-        <h4>The Best Pizza Around</h4>
+  <body class="container">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="text-center">Pepe's Pizza</h1>
       </div>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <form id="pizza-options">
-            <div id="size">
-              <h3>Size:</h3><br>
-                <select class="form-control">
-                  <option>Small</option>
-                  <option>Medium</option>
-                  <option>Large</option>
-                  <option>New York</option>
-                </select>
-            </div>
-            <div class="topping-one">
-              <h3>Toppings:</h3><br>
-              <select class="form-control">
-                <option>Cheese</option>
-                <option>Pepperoni</option>
-                <option>Hawaiian</option>
-                <option>Meat Lovers</option>
-                <option>Canadian Bacon</option>
-              </select>
-            </div>
-            <div class="topping-two"><br>
-              <select class="form-control">
-                <option>Cheese</option>
-                <option>Pepperoni</option>
-                <option>Hawaiian</option>
-                <option>Meat Lovers</option>
-                <option>Canadian Bacon</option>
-              </select>
-            </div>
-          </form><br>
-          <button type="submit"class="btn btn-success">Order</button>
+    </div>
+    <div class="row">
+      <div class="container col-sm-4">
+        <div class="jumbotron">
+          <h2 class="text-center">Menu</h2>
+          <hr>
+          <div class="sizes">
+            <h4 class="text-center">Pizza</h4>
+            <p><strong>Small</strong></p>
+            <p><span class="red-text">$8.00</span></p>
+            <p><strong>Medium</strong></p>
+            <p><span class="red-text">$9.75</span></p>
+            <p><strong>Large</strong></p>
+            <p><span class="red-text">$11.50</span></p>
+          </ul>
+        </div>
+        <div class="toppings-menu">
+          <h4 class="text-center">Toppings</h4>
+          <h6 class="text-center">$2.00</h6>
+          <p>Pepperoni</p>
+          <p>Mushrooms</p>
+          <p>Onions</p>
+          <p>Sausage</p>
+          <p>Bacon</p>
+          <p>Extra Cheese</p>
         </div>
       </div>
     </div>
-
+    <div class="container col-sm-8">
+      <div class="jumbotron">
+        <div class="pizza-form">
+          <form id="pizza-options">
+            <h2>Customize your <span class="red-text">Pizza</span></h2>
+            <div class="form-group">
+              <label for="name">What's your <span class="red-text">name</span>?</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="all-toppings">
+              <div class="form-group">
+                <div class="new-topping">
+                  <label for="new-toppings">What kind of <span class="red-text">toppings</span> would you like?</label>
+                  <select class="form-control" id="new-toppings">
+                    <option>Pepperoni</option>
+                    <option>Mushrooms</option>
+                    <option>Onions</option>
+                    <option>Sausage</option>
+                    <option>Bacon</option>
+                    <option>Extra Cheese</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="size">What <span class="red-text">size</span> would you like?</label>
+              <select class="form-control" id="size">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="button" id="add-topping" class="btn btn-md btn-danger">Add Topping</button>
+              <button type="submit" id="submit" class="btn btn-md btn-warning">Get Total</button>
+            </div>
+          </form>
+        </div>
+        <div class="total-price">
+          <div class="total-price-text">
+          </div>
+          <div class="final-text">
+          </div>
+        </div>
+        <div class="order-finish">
+        </div>
+      </div>
+    </div>
   </body>
 </html>
